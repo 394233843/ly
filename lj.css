@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'RuiHeiXiTi';
+    src: url('fonts/RuiHeiXiTi.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.animate-box {
+    width: 100%;
+    height: 100%;
+
+    white-space: nowrap;
+    font-size: 0;
+    vertical-align: top;
+
+    position: relative;
+    left: 0;
+    top: 0;
+
+    transform-origin:left top;
+    transition: all .5s cubic-bezier(.77, .10, .22, 1);
+}
+
+.animate-box-show-all {
+    left: 0 !important;
+    top: 0 !important;
+    padding-left: 10%;
+    padding-top: 20%;
+    background-color: #f8f8f8;
+}
+.animate-box-show-all .section {
+    width: 10%;
+    height: 10%;
+    font-size: 10px;
+}
+
+.animate-box-show-all .page1,
+.animate-box-show-all .page2,
+.animate-box-show-all .page6,
+.animate-box-show-all .page7 {
+    transform: translateY(-80%);
+
+}
+
+.animate-box-show-all .page4 {
+    transform: translateY(100%);
+}
+
+.section {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    text-align: left;
+
+    white-space: normal;
+    vertical-align: top;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    /* background-color: #0f0; */
+}
+
+.map {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.map-section {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 3px;
+    width: 8%;
+    height: 8%;
+}
+
+.map-page {
+    margin: 3px;
+    width: 90%;
+    height: 90%;
+    background-color: #46a0f0;
+    opacity: 0.5;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.map-page:hover {
+    opacity: 1;
+}
+
+.map-page-up {
+    transform: translateY(-80%);
+}
+
+.map-page-down {
+    transform: translateY(100%);
+}
